@@ -1,5 +1,7 @@
 package heima_multi_thread_exercise;
 
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
 /**
  * @author ostangt
  * <p>
@@ -15,6 +17,7 @@ public class test1 {
         Sell sell = new Sell();
         new Thread(sell, "窗口1").start();
         new Thread(sell, "窗口2").start();
+
     }
 }
 
@@ -37,7 +40,7 @@ class Sell implements Runnable {
     }
 }
 
-class Ticket {
+class Ticket extends AbstractQueuedSynchronizer {
     public static int cnt = 1000;
     public static Object lock = new Object();
 }

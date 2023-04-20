@@ -654,7 +654,9 @@ CPU核数/(1-阻塞系数) 阻塞系数在0.8~0.9之间
 System.out.println(Runtime.getRuntime().availableProcessors());
 ```
 
-当以上都不适用时，选用动态化线程池，看美团技术团队的实践：https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html
+当以上都不适用时，选用动态化线程池，看美团技术团队的实践：
+
+https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html
 
 ## 9. Executor和Executors的区别？
 
@@ -783,6 +785,8 @@ Atomic 是指一个操作是不可中断的。即使是在多个线程一起执�
   private volatile int value;
 
 ```
+
+
 
 ## 参考
 
